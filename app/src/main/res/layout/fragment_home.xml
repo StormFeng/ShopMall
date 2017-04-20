@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/icon_sign" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/temp_head" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="向店主进发"
+                        android:textColor="#6D6C6C"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/icon_scan" />
+            </LinearLayout>
+            <com.midian.base.widget.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="133dp"
+                app:indicator_width="7dp"
+                app:indicator_height="7dp"></com.midian.base.widget.Banner>
+            <com.lida.shopping.widget.inner.InnerGridView
+                android:id="@+id/gridType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="5"
+                android:listSelector="@null">
+            </com.lida.shopping.widget.inner.InnerGridView>
+            <com.lida.shopping.widget.inner.InnerGridView
+                android:id="@+id/gridTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="4"
+                android:layout_marginTop="5dp"
+                android:listSelector="@null">
+            </com.lida.shopping.widget.inner.InnerGridView>
+            <net.lucode.hackware.magicindicator.MagicIndicator
+                android:id="@+id/magic_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/white">
+            </net.lucode.hackware.magicindicator.MagicIndicator>
+            <com.lida.shopping.widget.inner.InnerViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:src="@drawable/temp_home_divid"
+                android:scaleType="fitXY"/>
+            <com.lida.shopping.widget.HorizontalListView
+                android:id="@+id/hListView"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="130dp">
+            </com.lida.shopping.widget.HorizontalListView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="center_horizontal"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="店主精选"
+                    android:textColor="#818080"
+                    android:textSize="15sp"/>
+                <com.lida.shopping.widget.inner.InnerGridView
+                    android:id="@+id/gridBot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:listSelector="#00FFFFFF"
+                    android:numColumns="3">
+                </com.lida.shopping.widget.inner.InnerGridView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
