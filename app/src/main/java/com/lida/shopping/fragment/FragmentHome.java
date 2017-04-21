@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.lida.shopping.R;
-import com.lida.shopping.adapter.Adapter;
+import com.lida.shopping.adapter.AdapterHomeViewPager;
 import com.lida.shopping.adapter.AdapterGridBot;
 import com.lida.shopping.adapter.AdapterGridGoodType;
 import com.lida.shopping.adapter.AdapterGridTime;
@@ -94,7 +94,7 @@ public class FragmentHome extends BaseFragment {
             view.setAdapter(new AdapterHomeHarryBay(_activity, i));
             views.add(view);
         }
-        viewPager.setAdapter(new Adapter(views));
+        viewPager.setAdapter(new AdapterHomeViewPager(views));
         viewPager.setOnPageChangeListener(onPageChangeListener);
         hListView.setAdapter(new AdapterHListView(_activity));
         gridBot.setAdapter(new AdapterGridBot(_activity));

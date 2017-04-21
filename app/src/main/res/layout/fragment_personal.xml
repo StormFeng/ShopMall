@@ -27,18 +27,22 @@
                 android:gravity="center"
                 android:background="@color/white"
                 android:orientation="horizontal">
+
                 <TextView
+                    android:id="@+id/tvReadyPay"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="待付款"
-                    android:textSize="9sp"
-                    android:minWidth="60dp"
-                    android:textColor="#323232"
-                    android:drawableTop="@drawable/icon_readypay"
                     android:drawablePadding="9dp"
+                    android:drawableTop="@drawable/icon_readypay"
                     android:gravity="center"
-                    android:padding="10dp"/>
+                    android:minWidth="60dp"
+                    android:padding="10dp"
+                    android:text="待付款"
+                    android:textColor="#323232"
+                    android:textSize="9sp" />
+
                 <TextView
+                    android:id="@+id/tvReadyDivider"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="待发货"
@@ -52,6 +56,7 @@
                     android:layout_marginRight="60dp"
                     android:padding="10dp"/>
                 <TextView
+                    android:id="@+id/tvAllBooks"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="全部订单"
@@ -73,6 +78,7 @@
                 android:paddingLeft="50dp"
                 android:paddingRight="50dp">
                 <TextView
+                    android:id="@+id/tvMoney"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -80,9 +86,11 @@
                     android:textSize="18sp"
                     android:textColor="#FF3356"/>
                 <TextView
+                    android:id="@+id/tvGetMoney"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="提现"
+                    android:padding="10dp"
                     android:drawableRight="@drawable/icon_arrow_r"
                     android:textSize="13sp"
                     android:textColor="#444444"
@@ -108,19 +116,20 @@
                     android:paddingBottom="20dp">
 
                     <TextView
+                        android:id="@+id/tvCoupon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawablePadding="9dp"
-                        android:drawableTop="@drawable/icon_readypay"
+                        android:drawableTop="@drawable/icon_coupon"
                         android:gravity="center"
                         android:minWidth="60dp"
                         android:padding="10dp"
-                        android:text="待付款"
+                        android:text="优惠券"
                         android:textColor="#323232"
                         android:textSize="9sp" />
 
                     <TextView
-                        android:id="@+id/textView2"
+                        android:id="@+id/tvSign"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="60dp"
@@ -135,6 +144,7 @@
                         android:textSize="9sp" />
 
                     <TextView
+                        android:id="@+id/tvQRCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawablePadding="9dp"
@@ -155,6 +165,7 @@
                     android:orientation="horizontal"
                     android:paddingBottom="20dp">
                     <TextView
+                        android:id="@+id/tvAboutUs"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="关于我们"
@@ -166,6 +177,7 @@
                         android:gravity="center"
                         android:padding="10dp"/>
                     <TextView
+                        android:id="@+id/tvReceiveAddress"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="收货地址"
@@ -179,6 +191,7 @@
                         android:layout_marginRight="60dp"
                         android:padding="10dp"/>
                     <TextView
+                        android:id="@+id/tvSetting"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="我的设置"
@@ -200,7 +213,7 @@
                     android:paddingBottom="20dp">
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:id="@+id/tvSuggest"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawablePadding="9dp"
@@ -213,6 +226,7 @@
                         android:textSize="9sp" />
 
                     <TextView
+                        android:id="@+id/tvProblem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="常见问题"
@@ -226,6 +240,7 @@
                         android:layout_marginRight="60dp"
                         android:padding="10dp"/>
                     <TextView
+                        android:id="@+id/tvLookHistory"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="浏览记录"
@@ -247,6 +262,7 @@
                     android:paddingBottom="20dp">
 
                     <TextView
+                        android:id="@+id/tvFan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawablePadding="9dp"
@@ -259,6 +275,7 @@
                         android:textSize="9sp" />
 
                     <TextView
+                        android:id="@+id/tvSpecial"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="店主专享"
@@ -272,6 +289,7 @@
                         android:layout_marginRight="60dp"
                         android:padding="10dp"/>
                     <TextView
+                        android:id="@+id/tvShopManage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="店铺管理"

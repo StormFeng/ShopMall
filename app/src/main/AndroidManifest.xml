@@ -20,6 +20,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--收货地址-->
+        <activity android:name=".activity.ActivityReceiveAddress"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--店铺管理-->
+        <activity android:name=".activity.ActivityShopManage"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--粉丝达人-->
+        <activity android:name=".activity.ActivityFan"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--全部订单-->
+        <activity android:name=".activity.ActivityBooks"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--常见问题-->
+        <activity android:name=".activity.ActivityProblem"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--优惠券-->
+        <activity android:name=".activity.ActivityCoupon"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--意见反馈-->
+        <activity android:name=".activity.ActivitySuggest"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

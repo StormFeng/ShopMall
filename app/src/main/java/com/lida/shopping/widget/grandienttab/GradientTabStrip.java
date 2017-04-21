@@ -741,7 +741,7 @@ public class GradientTabStrip extends BaseTabStrip {
     /**
      * 获取Adapter
      *
-     * @return Adapter
+     * @return AdapterHomeViewPager
      */
     public GradientTabAdapter getAdapter() {
         return mAdapter;
@@ -750,7 +750,7 @@ public class GradientTabStrip extends BaseTabStrip {
     /**
      * 设置Adapter
      *
-     * @param adapter Adapter
+     * @param adapter AdapterHomeViewPager
      */
     public void setAdapter(GradientTabAdapter adapter) {
         if (mAdapter != adapter) {

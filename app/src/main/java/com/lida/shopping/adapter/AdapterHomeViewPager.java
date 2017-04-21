@@ -10,11 +10,11 @@ import java.util.List;
  * Created by WeiQingFeng on 2017/4/20.
  */
 
-public class Adapter extends PagerAdapter {
+public class AdapterHomeViewPager extends PagerAdapter {
 
     private List<View> views;
 
-    public Adapter(List<View> views) {
+    public AdapterHomeViewPager(List<View> views) {
         this.views = views;
     }
 

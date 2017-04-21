@@ -2,17 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:padding="10dp"
-    android:background="@color/white">
+    android:gravity="center">
     <CheckBox
         android:id="@+id/cb"
-        android:layout_width="78dp"
-        android:layout_height="24dp"
-        android:text="热门"
+        android:layout_width="77dp"
+        android:layout_height="27dp"
         android:button="@null"
-        android:textSize="14sp"
+        android:text="物流问题"
+        android:textColor="@color/select_cb_suggest"
         android:gravity="center"
-        android:textColor="@color/selector_typelist"
-        android:background="@drawable/selector_typelist"/>
+        android:textSize="12sp"
+        android:background="@drawable/select_cb_suggest"/>
 </LinearLayout>

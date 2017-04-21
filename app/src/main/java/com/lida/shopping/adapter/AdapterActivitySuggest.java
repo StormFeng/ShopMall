@@ -5,38 +5,30 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.CheckBox;
 
-import com.apkfuns.logutils.LogUtils;
 import com.lida.shopping.R;
-
-import java.util.Arrays;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * 首页tab选项
+ * 意见反馈
  * Created by WeiQingFeng on 2017/4/20.
  */
 
-public class AdapterHomeHarryBay extends BaseAdapter {
+public class AdapterActivitySuggest extends BaseAdapter {
 
     private Context context;
-    private int number;
-    private String[] s = {"热门","上装","下装","鞋靴"};
+    private String[] data={"物流问题","商品问题","售后问题","软件问题","店主问题","其他问题"};
 
-    public AdapterHomeHarryBay(Context context, int number) {
+    public AdapterActivitySuggest(Context context) {
         this.context = context;
-        this.number = number;
     }
 
     @Override
     public int getCount() {
-        return s.length;
+        return data.length;
     }
 
     @Override
@@ -53,30 +45,19 @@ public class AdapterHomeHarryBay extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.item_home_harrybay, null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_activitysuggest, null);
             viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
+        viewHolder.cb.setText(data[position]);
         return convertView;
     }
 
     static class ViewHolder {
-        @BindView(R.id.ivGood)
-        ImageView ivGood;
-        @BindView(R.id.tvName)
-        TextView tvName;
-        @BindView(R.id.tvLimitNumber)
-        TextView tvLimitNumber;
-        @BindView(R.id.tvRemindNumber)
-        TextView tvRemindNumber;
-        @BindView(R.id.tvPrice)
-        TextView tvPrice;
-        @BindView(R.id.tvEarnMoney)
-        TextView tvEarnMoney;
-        @BindView(R.id.btnBayNow)
-        Button btnBayNow;
+        @BindView(R.id.cb)
+        CheckBox cb;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
