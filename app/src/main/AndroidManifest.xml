@@ -49,6 +49,39 @@
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustUnspecified|stateHidden"
             android:screenOrientation="portrait"/>
+        <!--设置-->
+        <activity android:name=".activity.ActivitySetting"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--申请提现-->
+        <activity android:name=".activity.ActivityGetMoney"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--新增地址-->
+        <activity android:name=".activity.ActivityAddAddress"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--店主专享-->
+        <activity android:name=".activity.ActivitySpecial"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--订单确认-->
+        <activity android:name=".activity.ActivityBookConfirm"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--购买礼包-->
+        <activity android:name=".activity.ActivityBuyGift"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:screenOrientation="portrait"/>
+        <!--热销排行榜-->
+        <activity android:name=".activity.ActivityHotList"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--商品详情-->
+        <activity android:name=".activity.ActivityGoodDetail"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

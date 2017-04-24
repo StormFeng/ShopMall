@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="265dp"
+    android:background="#FFF">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#E9E7E7"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大小咖"
+            android:textSize="11sp"
+            android:textColor="#222121"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="领取优惠券"
+            android:textSize="12sp"
+            android:textColor="#222121"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+    </ListView>
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FE4070"
+        android:text="关闭"
+        android:textColor="#FFF"
+        android:textSize="14sp"/>
+</LinearLayout>

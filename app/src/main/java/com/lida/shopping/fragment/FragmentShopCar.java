@@ -13,9 +13,11 @@ import android.widget.TextView;
 
 import com.apkfuns.logutils.LogUtils;
 import com.lida.shopping.R;
+import com.lida.shopping.activity.ActivityBookConfirm;
 import com.lida.shopping.adapter.AdapterFragmentShopCar;
 import com.lida.shopping.bean.FragmentShopCarBean;
 import com.midian.base.base.BaseFragment;
+import com.midian.base.util.UIHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -142,5 +144,6 @@ public class FragmentShopCar extends BaseFragment {
 
     @OnClick(R.id.btnCheckout)
     public void onViewClicked() {
+        UIHelper.jump(_activity, ActivityBookConfirm.class);
     }
 }

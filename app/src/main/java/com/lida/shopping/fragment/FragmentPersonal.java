@@ -11,9 +11,12 @@ import com.lida.shopping.R;
 import com.lida.shopping.activity.ActivityBooks;
 import com.lida.shopping.activity.ActivityCoupon;
 import com.lida.shopping.activity.ActivityFan;
+import com.lida.shopping.activity.ActivityGetMoney;
 import com.lida.shopping.activity.ActivityProblem;
 import com.lida.shopping.activity.ActivityReceiveAddress;
+import com.lida.shopping.activity.ActivitySetting;
 import com.lida.shopping.activity.ActivityShopManage;
+import com.lida.shopping.activity.ActivitySpecial;
 import com.lida.shopping.activity.ActivitySuggest;
 import com.lida.shopping.data.ActivityFanData;
 import com.midian.base.base.BaseFragment;
@@ -96,6 +99,7 @@ public class FragmentPersonal extends BaseFragment {
             case R.id.tvMoney:
                 break;
             case R.id.tvGetMoney:
+                UIHelper.jump(_activity, ActivityGetMoney.class);
                 break;
             case R.id.tvCoupon:
                 UIHelper.jump(_activity, ActivityCoupon.class);
@@ -110,6 +114,7 @@ public class FragmentPersonal extends BaseFragment {
                 UIHelper.jump(_activity, ActivityReceiveAddress.class);
                 break;
             case R.id.tvSetting:
+                UIHelper.jump(_activity, ActivitySetting.class);
                 break;
             case R.id.tvSuggest:
                 UIHelper.jump(_activity, ActivitySuggest.class);
@@ -123,6 +128,7 @@ public class FragmentPersonal extends BaseFragment {
                 UIHelper.jump(_activity, ActivityFan.class);
                 break;
             case R.id.tvSpecial:
+                UIHelper.jump(_activity, ActivitySpecial.class);
                 break;
             case R.id.tvShopManage:
                 UIHelper.jump(_activity, ActivityShopManage.class);

@@ -6,6 +6,7 @@ import com.lida.shopping.R;
 import com.lida.shopping.data.ActivityProblemData;
 import com.lida.shopping.tpl.ActivityProblemTpl;
 import com.midian.base.base.BaseListActivity;
+import com.midian.base.util.UIHelper;
 import com.midian.base.widget.BaseLibTopbarView;
 import com.midian.base.widget.pulltorefresh.listviewhelper.IDataSource;
 
@@ -28,6 +29,8 @@ public class ActivityProblem extends BaseListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ButterKnife.bind(this);
+        topbar.setTitle("常见问题");
+        topbar.setLeftImageButton(R.drawable.icon_back, UIHelper.finish(_activity));
     }
 
     @Override

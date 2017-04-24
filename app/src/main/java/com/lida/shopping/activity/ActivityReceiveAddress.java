@@ -1,10 +1,7 @@
 package com.lida.shopping.activity;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.util.AttributeSet;
-import android.view.View;
+import android.widget.Button;
 
 import com.lida.shopping.R;
 import com.lida.shopping.data.ActivityReceiveAddressData;
@@ -16,19 +13,26 @@ import com.midian.base.widget.pulltorefresh.listviewhelper.IDataSource;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * 收货地址
  * Created by WeiQingFeng on 2017/4/21.
  */
 
-public class ActivityReceiveAddress extends BaseListActivity{
+public class ActivityReceiveAddress extends BaseListActivity {
 
-    private BaseLibTopbarView topbar;
+    @BindView(R.id.topbar)
+    BaseLibTopbarView topbar;
+    @BindView(R.id.btnAddAddress)
+    Button btnAddAddress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        topbar = (BaseLibTopbarView)findViewById(R.id.topbar);
+        ButterKnife.bind(this);
         topbar.setTitle("收货地址");
         topbar.setLeftImageButton(R.drawable.icon_back, UIHelper.finish(_activity));
     }
@@ -46,5 +50,10 @@ public class ActivityReceiveAddress extends BaseListActivity{
     @Override
     protected Class getTemplateClass() {
         return ActivityReceiveAddressTpl.class;
+    }
+
+    @OnClick(R.id.btnAddAddress)
+    public void onViewClicked() {
+        UIHelper.jump(_activity,ActivityAddAddress.class);
     }
 }

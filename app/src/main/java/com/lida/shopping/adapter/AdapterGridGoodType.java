@@ -1,14 +1,18 @@
 package com.lida.shopping.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lida.shopping.R;
+import com.lida.shopping.activity.ActivityHotList;
+import com.midian.base.util.UIHelper;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -50,7 +54,7 @@ public class AdapterGridGoodType extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
         if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(R.layout.item_gridgoodtype, null);
@@ -61,6 +65,14 @@ public class AdapterGridGoodType extends BaseAdapter {
         }
         viewHolder.tv.setText(str.get(position));
         viewHolder.iv.setImageResource(pics.get(position));
+        viewHolder.llItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(position==0){
+                    UIHelper.jump((Activity) context, ActivityHotList.class);
+                }
+            }
+        });
         return convertView;
     }
 
@@ -69,6 +81,8 @@ public class AdapterGridGoodType extends BaseAdapter {
         ImageView iv;
         @BindView(R.id.tv)
         TextView tv;
+        @BindView(R.id.llItem)
+        LinearLayout llItem;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

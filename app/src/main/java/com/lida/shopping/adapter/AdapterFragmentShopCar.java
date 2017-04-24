@@ -17,6 +17,8 @@ import com.apkfuns.logutils.LogUtils;
 import com.lida.shopping.R;
 import com.lida.shopping.bean.FragmentShopCarBean;
 import com.lida.shopping.widget.NumberWidget;
+import com.lida.shopping.widget.dialog.DialogReceiveCoupon;
+
 import java.util.ArrayList;
 import java.util.List;
 import butterknife.BindView;
@@ -117,6 +119,12 @@ public class AdapterFragmentShopCar extends BaseExpandableListAdapter {
                 }
             }
         };
+        viewHolder.tvGetCoupon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DialogReceiveCoupon(context).show();
+            }
+        });
         CompoundButton.OnCheckedChangeListener onCheckedChangeListener=new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
