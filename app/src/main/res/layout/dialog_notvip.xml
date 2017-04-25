@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+    <RelativeLayout
+        android:layout_width="291dp"
+        android:layout_height="210dp"
+        android:orientation="vertical"
+        android:background="@drawable/shape_5white_radius_solid">
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_close2"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="亲 大小咖店主才有专属二维码"
+            android:textColor="#929191"
+            android:textSize="14sp"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/icon_smile"
+            android:drawablePadding="13dp"/>
+    </RelativeLayout>
+</LinearLayout>

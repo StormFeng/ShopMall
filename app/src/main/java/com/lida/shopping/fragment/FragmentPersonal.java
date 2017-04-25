@@ -13,6 +13,7 @@ import com.lida.shopping.activity.ActivityCoupon;
 import com.lida.shopping.activity.ActivityFan;
 import com.lida.shopping.activity.ActivityGetMoney;
 import com.lida.shopping.activity.ActivityProblem;
+import com.lida.shopping.activity.ActivityQRCode;
 import com.lida.shopping.activity.ActivityReceiveAddress;
 import com.lida.shopping.activity.ActivitySetting;
 import com.lida.shopping.activity.ActivityShopManage;
@@ -107,6 +108,7 @@ public class FragmentPersonal extends BaseFragment {
             case R.id.tvSign:
                 break;
             case R.id.tvQRCode:
+                UIHelper.jump(_activity, ActivityQRCode.class);
                 break;
             case R.id.tvAboutUs:
                 break;

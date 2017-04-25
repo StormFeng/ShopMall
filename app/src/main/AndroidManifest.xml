@@ -60,6 +60,7 @@
         <!--新增地址-->
         <activity android:name=".activity.ActivityAddAddress"
             android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
             android:screenOrientation="portrait"/>
         <!--店主专享-->
         <activity android:name=".activity.ActivitySpecial"
@@ -80,6 +81,14 @@
             android:screenOrientation="portrait"/>
         <!--商品详情-->
         <activity android:name=".activity.ActivityGoodDetail"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--关于我们-->
+        <activity android:name=".activity.ActivityAboutUs"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--我的二维码-->
+        <activity android:name=".activity.ActivityQRCode"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
     </application>

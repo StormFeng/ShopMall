@@ -2,66 +2,54 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
-
+    android:gravity="center"
+    android:background="@color/white">
     <LinearLayout
-        android:id="@+id/llGoodInfo"
-        android:layout_width="wrap_content"
+        android:layout_width="105dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingBottom="20dp"
         android:orientation="vertical"
-        android:background="@color/white"
-        android:layout_centerInParent="true">
-
+        android:gravity="center">
         <ImageView
-            android:id="@+id/ivGood"
-            android:layout_width="106dp"
-            android:layout_height="106dp"
-            android:src="@drawable/temp_good1"
-            android:padding="4dp"
-            android:background="@drawable/shape_1gray_stroke"/>
-
+            android:id="@+id/iv"
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:padding="2dp"
+            android:background="@drawable/shape_1gray_stroke"
+            android:src="@drawable/temp_good5"/>
         <TextView
-            android:id="@+id/tvName"
+            android:id="@+id/tvGoodName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="年青草绿设计款"
-            android:textColor="#818080"
-            android:textSize="9sp" />
-
+            android:text="HAKUBAKU黄金大地"
+            android:textSize="10sp"
+            android:textColor="#939393"
+            android:layout_marginTop="14dp"/>
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
-
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="6dp">
             <TextView
                 android:id="@+id/tvNewPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="￥288"
-                android:textColor="#616161"
-                android:textSize="10sp" />
-
+                android:textSize="11sp"
+                android:textColor="#575656"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="/"
-                android:textColor="#818080"
-                android:textSize="10sp" />
-
+                android:textSize="11sp"
+                android:textColor="#939393"/>
             <com.lida.shopping.widget.TextViewDelete
                 android:id="@+id/tvOldPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="￥388"
-                android:textColor="#B2B2B2"
-                android:textSize="10sp" />
+                android:textSize="11sp"
+                android:textColor="#939393"/>
         </LinearLayout>
-
-
     </LinearLayout>
-
 </LinearLayout>

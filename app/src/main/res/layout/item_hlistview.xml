@@ -36,11 +36,18 @@
                     android:textSize="9sp" />
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textColor="#A4A4A4"
+                    android:textSize="9sp" />
+
+                <com.lida.shopping.widget.TextViewDelete
                     android:id="@+id/tvOldPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="￥288"
-                    android:textColor="#616161"
+                    android:textColor="#A4A4A4"
                     android:textSize="9sp" />
             </LinearLayout>
 

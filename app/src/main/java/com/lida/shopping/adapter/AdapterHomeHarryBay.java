@@ -40,7 +40,7 @@ public class AdapterHomeHarryBay extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return s.length;
+        return number;
     }
 
     @Override

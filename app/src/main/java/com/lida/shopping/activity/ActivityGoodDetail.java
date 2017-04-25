@@ -10,8 +10,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.lida.shopping.R;
+import com.lida.shopping.fragment.FragmentGoodCarefulSelect;
 import com.lida.shopping.fragment.FragmentGoodDetail;
 import com.lida.shopping.fragment.FragmentGoodSource;
+import com.lida.shopping.widget.indicator.LinePageIndicator;
 import com.lida.shopping.widget.inner.InnerViewPager;
 import com.midian.base.base.BaseFragmentActivity;
 import com.midian.base.util.Func;
@@ -27,7 +29,6 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerInd
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.LinePagerIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.ClipPagerTitleView;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.DummyPagerTitleView;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.badge.BadgePagerTitleView;
 
 import java.util.ArrayList;
@@ -51,10 +52,10 @@ public class ActivityGoodDetail extends BaseFragmentActivity {
     InnerViewPager viewPager;
     @BindView(R.id.viewPagerBot)
     InnerViewPager viewPagerBot;
-    @BindView(R.id.magic_indicatorBot)
-    MagicIndicator magicIndicatorBot;
 
     private static final String[] CHANNELS = new String[]{"商品详情", "商品素材"};
+    @BindView(R.id.indicator)
+    LinePageIndicator indicator;
     private List<String> mDataList = Arrays.asList(CHANNELS);
     private List<Fragment> fragments = new ArrayList<>();
     private List<Fragment> fragmentsBot = new ArrayList<>();
@@ -66,7 +67,7 @@ public class ActivityGoodDetail extends BaseFragmentActivity {
         ButterKnife.bind(this);
         initView();
         initMagicIndicator();
-        initMagicIndicator(null);
+
     }
 
     private void initView() {
@@ -103,7 +104,7 @@ public class ActivityGoodDetail extends BaseFragmentActivity {
         });
 
         for (int i = 0; i < 4; i++) {
-            fragmentsBot.add(new FragmentGoodSource());
+            fragmentsBot.add(new FragmentGoodCarefulSelect());
         }
         viewPagerBot.setAdapter(new FragmentPagerAdapter(fm) {
             @Override
@@ -116,6 +117,10 @@ public class ActivityGoodDetail extends BaseFragmentActivity {
                 return fragmentsBot.size();
             }
         });
+        indicator.setViewPager(viewPagerBot);
+        indicator.setLineWidth(Func.Dp2Px(_activity,20));
+        indicator.setSelectedColor(Color.parseColor("#FF4701"));
+        indicator.setUnselectedColor(Color.parseColor("#969696"));
     }
 
     private void initMagicIndicator() {
@@ -164,36 +169,5 @@ public class ActivityGoodDetail extends BaseFragmentActivity {
         titleContainer.setDividerPadding(UIUtil.dip2px(this, 15));
 //        titleContainer.setDividerDrawable(getResources().getDrawable(R.drawable.simple_splitter));
         ViewPagerHelper.bind(magicIndicator, viewPager);
-    }
-
-    private void initMagicIndicator(View view) {
-        CommonNavigator commonNavigator = new CommonNavigator(_activity);
-        commonNavigator.setAdjustMode(true);
-        commonNavigator.setAdapter(new CommonNavigatorAdapter() {
-            @Override
-            public int getCount() {
-                return 4;
-            }
-
-            @Override
-            public IPagerTitleView getTitleView(Context context, final int index) {
-                return new DummyPagerTitleView(context);
-            }
-
-            @Override
-            public IPagerIndicator getIndicator(Context context) {
-                LinePagerIndicator indicator = new LinePagerIndicator(context);
-                indicator.setLineHeight(Func.Dp2Px(_activity, 3));
-                indicator.setColors(Color.parseColor("#EB1712"));
-                return indicator;
-            }
-
-//            @Override
-//            public float getTitleWeight(Context context, int index) {
-//                return 0.5f;
-//            }
-        });
-        magicIndicatorBot.setNavigator(commonNavigator);
-        ViewPagerHelper.bind(magicIndicatorBot, viewPagerBot);
     }
 }
