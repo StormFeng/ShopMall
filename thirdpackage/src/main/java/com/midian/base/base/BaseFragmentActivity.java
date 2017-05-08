@@ -51,13 +51,6 @@ public class BaseFragmentActivity extends FragmentActivity implements
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		AppManager.getAppManager().addActivity(this);
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-			Window window = getWindow();
-			window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-		} else {
-			StatusBarUtil.setColor(this, getResources().getColor(R.color.colorPrimary));
-			StatusBarUtil.setTranslucentForImageViewInFragment(_activity, 0, null);
-		}
 		_activity = this;
 		ac = (AppContext) getApplication();
 		fm = getSupportFragmentManager();

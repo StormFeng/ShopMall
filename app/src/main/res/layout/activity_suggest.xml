@@ -114,12 +114,6 @@
                     android:text="提交"
                     android:textColor="@color/white"
                     android:textSize="15sp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="万人以上团队合作请发邮件至：228866804@qq.com"
-                    android:textColor="#444"
-                    android:textSize="10sp"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

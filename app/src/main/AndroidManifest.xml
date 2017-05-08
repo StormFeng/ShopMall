@@ -10,9 +10,8 @@
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme1" >
-        <activity android:name=".MainActivity"
+        <activity android:name=".login.ActivityFirstOpen"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--主界面-->
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:screenOrientation="portrait"/>
         <!--收货地址-->
         <activity android:name=".activity.ActivityReceiveAddress"
             android:launchMode="singleTop"
@@ -89,6 +93,24 @@
             android:screenOrientation="portrait"/>
         <!--我的二维码-->
         <activity android:name=".activity.ActivityQRCode"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--填写邀请码-->
+        <activity android:name=".login.ActivityInvitationCode"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:screenOrientation="portrait"/>
+        <!--登录-->
+        <activity android:name=".login.ActivityLogin"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:screenOrientation="portrait"/>
+        <!--我的邀请码-->
+        <activity android:name=".activity.ActivityMyInvitationCode"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--公告通知-->
+        <activity android:name=".activity.ActivityNoticeList"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
     </application>

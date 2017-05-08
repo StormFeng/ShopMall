@@ -78,7 +78,7 @@ public class BaseLibTopbarView extends RelativeLayout {
 
 	public BaseLibTopbarView setTitle(String title) {
 		title_tv.setText(title);
-		title_tv.setTextColor(Color.parseColor("#FFFFFF"));
+		title_tv.setTextColor(Color.parseColor("#000000"));
 		return this;
 	}
 
@@ -190,7 +190,8 @@ public class BaseLibTopbarView extends RelativeLayout {
             title_tv.setTextColor(getResources().getColor(R.color.white));
 			left_tv.setTextColor(getResources().getColor(R.color.white));
 			right_tv.setTextColor(getResources().getColor(R.color.white));
-			setBackgroundResource(R.color.topbar);
+			setBackgroundResource(R.color.white);
+			line_iv.setVisibility(VISIBLE);
 			// setBackgroundColor(getResources().getColor(
 			// R.color.topbar_bg));
 			// setBackgroundResource(R.drawable.dp_topbar_bg);

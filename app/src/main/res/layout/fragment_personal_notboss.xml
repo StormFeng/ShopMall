@@ -70,40 +70,11 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:background="@color/white"
-                android:layout_marginTop="3dp"
-                android:paddingLeft="50dp"
-                android:paddingRight="50dp">
-                <TextView
-                    android:id="@+id/tvMoney"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="0.00"
-                    android:textSize="18sp"
-                    android:textColor="#FF3356"/>
-                <TextView
-                    android:id="@+id/tvGetMoney"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="提现"
-                    android:padding="10dp"
-                    android:drawableRight="@drawable/icon_arrow_r"
-                    android:textSize="13sp"
-                    android:textColor="#444444"
-                    android:drawablePadding="10dp"
-                    android:gravity="center"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center_vertical"
                 android:background="@color/white"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="7dp"
                 android:paddingTop="23dp"
                 android:paddingBottom="30dp">
 
@@ -129,7 +100,7 @@
                         android:textSize="9sp" />
 
                     <TextView
-                        android:id="@+id/tvInvitationCode"
+                        android:id="@+id/tvWantShop"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="60dp"
@@ -138,58 +109,11 @@
                         android:drawableTop="@drawable/icon_sign"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="我的邀请码"
+                        android:text="我要开店"
                         android:minWidth="60dp"
                         android:textColor="#323232"
                         android:textSize="9sp" />
 
-                    <TextView
-                        android:id="@+id/tvQRCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawablePadding="9dp"
-                        android:drawableTop="@drawable/icon_scan"
-                        android:gravity="center"
-                        android:minWidth="60dp"
-                        android:padding="10dp"
-                        android:text="二维码"
-                        android:textColor="#323232"
-                        android:textSize="9sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:background="@color/white"
-                    android:orientation="horizontal"
-                    android:paddingBottom="20dp">
-                    <TextView
-                        android:id="@+id/tvReceiveAddress"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="收货地址"
-                        android:minWidth="60dp"
-                        android:textSize="9sp"
-                        android:textColor="#323232"
-                        android:drawableTop="@drawable/icon_receiveposition"
-                        android:drawablePadding="9dp"
-                        android:gravity="center"
-                        android:padding="10dp"/>
-                    <TextView
-                        android:id="@+id/tvAboutUs"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="关于我们"
-                        android:textSize="9sp"
-                        android:minWidth="60dp"
-                        android:textColor="#323232"
-                        android:drawableTop="@drawable/icon_aboutus"
-                        android:drawablePadding="9dp"
-                        android:layout_marginLeft="60dp"
-                        android:layout_marginRight="60dp"
-                        android:gravity="center"
-                        android:padding="10dp"/>
                     <TextView
                         android:id="@+id/tvLookHistory"
                         android:layout_width="wrap_content"
@@ -211,7 +135,6 @@
                     android:background="@color/white"
                     android:orientation="horizontal"
                     android:paddingBottom="20dp">
-
                     <TextView
                         android:id="@+id/tvSuggest"
                         android:layout_width="wrap_content"
@@ -224,19 +147,20 @@
                         android:minWidth="60dp"
                         android:textColor="#323232"
                         android:textSize="9sp" />
+
                     <TextView
-                        android:id="@+id/tvMyMessage"
+                        android:id="@+id/tvSetting"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="我的消息"
+                        android:text="我的设置"
                         android:minWidth="60dp"
                         android:textSize="9sp"
-                        android:textColor="#323232"
-                        android:drawableTop="@drawable/icon_lookhistory"
-                        android:drawablePadding="9dp"
-                        android:gravity="center"
                         android:layout_marginLeft="60dp"
                         android:layout_marginRight="60dp"
+                        android:textColor="#323232"
+                        android:drawableTop="@drawable/icon_setting"
+                        android:drawablePadding="9dp"
+                        android:gravity="center"
                         android:padding="10dp"/>
 
                     <TextView
@@ -262,41 +186,41 @@
                     android:paddingBottom="20dp">
 
                     <TextView
-                        android:id="@+id/tvFan"
+                        android:id="@+id/tvReceiveAddress"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawablePadding="9dp"
-                        android:drawableTop="@drawable/icon_fan"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="粉丝达人"
+                        android:text="收货地址"
+                        android:textSize="9sp"
                         android:minWidth="60dp"
                         android:textColor="#323232"
-                        android:textSize="9sp" />
+                        android:drawableTop="@drawable/icon_aboutus"
+                        android:drawablePadding="9dp"
+                        android:gravity="center"
+                        android:padding="10dp"/>
 
                     <TextView
-                        android:id="@+id/tvSpecial"
+                        android:id="@+id/tvAboutUs"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="店主专享"
+                        android:text="关于我们"
                         android:minWidth="60dp"
                         android:textSize="9sp"
                         android:textColor="#323232"
-                        android:drawableTop="@drawable/icon_special"
+                        android:drawableTop="@drawable/icon_aboutus"
                         android:drawablePadding="9dp"
                         android:gravity="center"
                         android:layout_marginLeft="60dp"
                         android:layout_marginRight="60dp"
                         android:padding="10dp"/>
                     <TextView
-                        android:id="@+id/tvShopManage"
+                        android:id="@+id/tvDownLoadApp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="店铺管理"
+                        android:text="下载APP"
                         android:minWidth="60dp"
                         android:textSize="9sp"
                         android:textColor="#323232"
-                        android:drawableTop="@drawable/icon_shopmanage"
+                        android:drawableTop="@drawable/icon_lookhistory"
                         android:drawablePadding="9dp"
                         android:gravity="center"
                         android:padding="10dp"/>

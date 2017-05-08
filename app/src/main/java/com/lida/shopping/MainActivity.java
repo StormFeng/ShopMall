@@ -10,6 +10,7 @@ import android.widget.Toast;
 import com.lida.shopping.fragment.FragmentClass;
 import com.lida.shopping.fragment.FragmentHome;
 import com.lida.shopping.fragment.FragmentPersonal;
+import com.lida.shopping.fragment.FragmentPersonalNotBoss;
 import com.lida.shopping.fragment.FragmentShopCar;
 import com.midian.base.base.BaseFragmentActivity;
 import com.midian.base.widget.BaseLibTopbarView;
@@ -40,6 +41,7 @@ public class MainActivity extends BaseFragmentActivity {
     private FragmentClass fragmentClass;
     private FragmentShopCar fragmentShopCar;
     private FragmentPersonal fragmentPersonal;
+    private FragmentPersonalNotBoss fragmentPersonalNotBoss;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,7 @@ public class MainActivity extends BaseFragmentActivity {
         fragmentClass = new FragmentClass();
         fragmentShopCar = new FragmentShopCar();
         fragmentPersonal = new FragmentPersonal();
+        fragmentPersonalNotBoss = new FragmentPersonalNotBoss();
         switchFragment(fragmentHome);
     }
 

@@ -5,45 +5,34 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.lida.shopping.R;
 import com.lida.shopping.activity.ActivityAboutUs;
 import com.lida.shopping.activity.ActivityBooks;
 import com.lida.shopping.activity.ActivityCoupon;
-import com.lida.shopping.activity.ActivityFan;
-import com.lida.shopping.activity.ActivityGetMoney;
-import com.lida.shopping.activity.ActivityMyInvitationCode;
-import com.lida.shopping.activity.ActivityNoticeList;
 import com.lida.shopping.activity.ActivityProblem;
-import com.lida.shopping.activity.ActivityQRCode;
 import com.lida.shopping.activity.ActivityReceiveAddress;
-import com.lida.shopping.activity.ActivitySetting;
-import com.lida.shopping.activity.ActivityShopManage;
-import com.lida.shopping.activity.ActivitySpecial;
 import com.lida.shopping.activity.ActivitySuggest;
-import com.lida.shopping.data.ActivityFanData;
 import com.midian.base.base.BaseFragment;
 import com.midian.base.util.UIHelper;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 
 /**
- * 我的
+ * 我的(不是店主)
  * Created by WeiQingFeng on 2017/4/20.
  */
 
-public class FragmentPersonal extends BaseFragment {
+public class FragmentPersonalNotBoss extends BaseFragment {
 
     Unbinder unbinder;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_personal, null);
+        View view = inflater.inflate(R.layout.fragment_personal_notboss, null);
         unbinder = ButterKnife.bind(this, view);
         return view;
     }
@@ -54,10 +43,9 @@ public class FragmentPersonal extends BaseFragment {
         unbinder.unbind();
     }
 
-    @OnClick({R.id.tvReadyPay, R.id.tvReadyDivider, R.id.tvAllBooks, R.id.tvMoney, R.id.tvGetMoney,
-            R.id.tvCoupon, R.id.tvQRCode, R.id.tvAboutUs, R.id.tvReceiveAddress, R.id.tvSuggest,
-            R.id.tvProblem, R.id.tvLookHistory, R.id.tvFan, R.id.tvSpecial, R.id.tvShopManage,
-            R.id.tvInvitationCode, R.id.tvMyMessage})
+    @OnClick({R.id.tvReadyPay, R.id.tvReadyDivider, R.id.tvAllBooks, R.id.tvCoupon, R.id.tvWantShop,
+            R.id.tvLookHistory, R.id.tvSuggest, R.id.tvSetting, R.id.tvProblem, R.id.tvReceiveAddress,
+            R.id.tvAboutUs, R.id.tvDownLoadApp})
     public void onViewClicked(View view) {
         Bundle bundle = new Bundle();
         switch (view.getId()) {
@@ -73,48 +61,28 @@ public class FragmentPersonal extends BaseFragment {
                 bundle.putInt("position",2);
                 UIHelper.jump(_activity, ActivityBooks.class,bundle);
                 break;
-            case R.id.tvMoney:
-                break;
-            case R.id.tvGetMoney:
-                UIHelper.jump(_activity, ActivityGetMoney.class);
-                break;
             case R.id.tvCoupon:
                 UIHelper.jump(_activity, ActivityCoupon.class);
                 break;
-            case R.id.tvInvitationCode:
-                UIHelper.jump(_activity, ActivityMyInvitationCode.class);
+            case R.id.tvWantShop:
                 break;
-            case R.id.tvQRCode:
-                UIHelper.jump(_activity, ActivityQRCode.class);
-                break;
-            case R.id.tvAboutUs:
-                UIHelper.jump(_activity, ActivityAboutUs.class);
-                break;
-            case R.id.tvReceiveAddress:
-                UIHelper.jump(_activity, ActivityReceiveAddress.class);
-                break;
-            case R.id.tvSetting:
-                UIHelper.jump(_activity, ActivitySetting.class);
+            case R.id.tvLookHistory:
                 break;
             case R.id.tvSuggest:
                 UIHelper.jump(_activity, ActivitySuggest.class);
                 break;
+            case R.id.tvSetting:
+                break;
             case R.id.tvProblem:
                 UIHelper.jump(_activity, ActivityProblem.class);
                 break;
-            case R.id.tvLookHistory:
+            case R.id.tvReceiveAddress:
+                UIHelper.jump(_activity, ActivityReceiveAddress.class);
                 break;
-            case R.id.tvFan:
-                UIHelper.jump(_activity, ActivityFan.class);
+            case R.id.tvAboutUs:
+                UIHelper.jump(_activity, ActivityAboutUs.class);
                 break;
-            case R.id.tvSpecial:
-                UIHelper.jump(_activity, ActivitySpecial.class);
-                break;
-            case R.id.tvShopManage:
-                UIHelper.jump(_activity, ActivityShopManage.class);
-                break;
-            case R.id.tvMyMessage:
-                UIHelper.jump(_activity, ActivityNoticeList.class);
+            case R.id.tvDownLoadApp:
                 break;
         }
     }

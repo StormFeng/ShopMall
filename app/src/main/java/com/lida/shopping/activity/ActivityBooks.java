@@ -9,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.apkfuns.logutils.LogUtils;
 import com.lida.shopping.R;
 import com.lida.shopping.fragment.FragmentAllBooks;
 import com.midian.base.base.BaseFragmentActivity;
@@ -58,6 +59,7 @@ public class ActivityBooks extends BaseFragmentActivity {
         ButterKnife.bind(this);
         initView();
         initMagicIndicator();
+        viewPager.setCurrentItem(mBundle.getInt("position"));
     }
 
     private void initView() {

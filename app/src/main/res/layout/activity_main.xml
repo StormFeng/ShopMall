@@ -38,41 +38,43 @@
             android:background="@color/white">
             <TextView
                 android:id="@+id/tvHome"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="首页"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:gravity="center"
-                android:minWidth="65dp"
                 android:drawableTop="@drawable/select_home"
                 android:enabled="false"
                 android:textColor="@color/select_tab"
                 android:textSize="10sp"
                 android:drawablePadding="5dp"/>
+
             <TextView
                 android:id="@+id/tvClass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="分类"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:gravity="center"
-                android:minWidth="65dp"
-                android:drawableTop="@drawable/select_class"
-                android:textColor="@color/select_tab"
-                android:textSize="10sp"
-                android:drawablePadding="5dp"/>
-            <View
                 android:layout_width="0dp"
                 android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/select_class"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="分类"
+                android:textColor="@color/select_tab"
+                android:textSize="10sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1.3"
                 android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/tvShopCar"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="购物车"
-                android:minWidth="65dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:gravity="center"
@@ -82,13 +84,13 @@
                 android:drawablePadding="5dp"/>
             <TextView
                 android:id="@+id/tvPersonal"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="我的"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:gravity="center"
-                android:minWidth="65dp"
                 android:drawableTop="@drawable/select_personal"
                 android:textColor="@color/select_tab"
                 android:textSize="10sp"
@@ -104,7 +106,7 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:gravity="center"
-        android:minWidth="65dp"
+        
         android:drawableTop="@drawable/icon_main"
         android:enabled="false"
         android:textColor="#8A8A8A"

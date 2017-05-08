@@ -79,4 +79,20 @@
             app:kswThumbColor="@color/white"
             app:kswTintColor="#09BB07"/>
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:gravity="center_vertical"
+        android:text="退出登录"
+        android:drawableRight="@drawable/icon_arrow_r"
+        android:textColor="#292929"
+        android:textSize="15sp"/>
 </LinearLayout>
