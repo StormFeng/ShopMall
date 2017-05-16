@@ -36,13 +36,17 @@ public class ActivityFirstOpen extends BaseActivity {
     @OnClick({R.id.btnPhoneLogin, R.id.btnWeChatLogin})
     public void onViewClicked(View view) {
         if(cbXieYi.isChecked()){
+            Bundle bundle = new Bundle();
+            bundle.putString("from","ActivityFirstOpen");
             switch (view.getId()) {
                 case R.id.btnPhoneLogin:
-                    UIHelper.jump(_activity,ActivityInvitationCode.class);
+                    UIHelper.jump(_activity,ActivityLogin.class,bundle);
                     break;
                 case R.id.btnWeChatLogin:
+                    UIHelper.jump(_activity,ActivityInvitationCode.class,bundle);
                     break;
             }
+            finish();
         }else{
             UIHelper.t(_activity,"请认真阅读《大小咖用户协议》");
         }

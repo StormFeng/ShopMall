@@ -113,8 +113,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:button="@null"
                         android:checked="true"
                         android:background="@drawable/select_check_circle"/>
@@ -142,8 +142,8 @@
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
                     <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:button="@null"
                         android:background="@drawable/select_check_circle"/>
                     <TextView
@@ -170,8 +170,8 @@
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
                     <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:button="@null"
                         android:background="@drawable/select_check_circle"/>
                     <TextView
@@ -441,6 +441,7 @@
             </LinearLayout>
             
             <Button
+                android:id="@+id/btnBuy"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginLeft="53dp"
@@ -458,6 +459,7 @@
                 android:layout_marginBottom="15dp"
                 android:orientation="horizontal">
                 <CheckBox
+                    android:id="@+id/cb"
                     android:layout_width="13dp"
                     android:layout_height="13dp"
                     android:button="@null"

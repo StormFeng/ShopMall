@@ -81,7 +81,7 @@ public class FragmentHome extends BaseFragment {
         for (int i = 0; i < 3; i++) {
             images.add(R.drawable.icon_banner);
         }
-        banner.setBannerStyle(Banner.CIRCLE_INDICATOR);//设置圆形指示器
+        banner.setBannerStyle(Banner.NOT_INDICATOR);//设置圆形指示器
         banner.setIndicatorGravity(Banner.CENTER);
         banner.isAutoPlay(true);
         banner.setDelayTime(5000);//设置轮播间隔时间

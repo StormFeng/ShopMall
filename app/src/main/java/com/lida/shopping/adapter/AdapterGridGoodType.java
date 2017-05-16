@@ -11,7 +11,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lida.shopping.R;
+import com.lida.shopping.activity.ActivityGlobal;
 import com.lida.shopping.activity.ActivityHotList;
+import com.lida.shopping.activity.ActivitySpecial;
 import com.midian.base.util.UIHelper;
 
 import java.util.ArrayList;
@@ -70,6 +72,10 @@ public class AdapterGridGoodType extends BaseAdapter {
             public void onClick(View v) {
                 if(position==0){
                     UIHelper.jump((Activity) context, ActivityHotList.class);
+                }else if(position==1 || position==2 || position==3){
+                    UIHelper.jump((Activity) context, ActivitySpecial.class);
+                }else{
+                    UIHelper.jump((Activity) context, ActivityGlobal.class);
                 }
             }
         });

@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="90dp"
+        android:layout_width="103dp"
         android:layout_height="130dp">
         <LinearLayout
             android:id="@+id/llGoodInfo"

@@ -1,5 +1,6 @@
 package com.lida.shopping.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lida.shopping.R;
+import com.lida.shopping.activity.ActivitySpecial;
+import com.midian.base.util.UIHelper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,7 +32,7 @@ public class AdapterHListView extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 15;
+        return 4;
     }
 
     @Override
@@ -52,13 +55,19 @@ public class AdapterHListView extends BaseAdapter {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        if(position==14){
+        if(position==3){
             viewHolder.llGoodInfo.setVisibility(View.GONE);
             viewHolder.btnLookMore.setVisibility(View.VISIBLE);
         }else{
             viewHolder.llGoodInfo.setVisibility(View.VISIBLE);
             viewHolder.btnLookMore.setVisibility(View.GONE);
         }
+        viewHolder.btnLookMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UIHelper.jump((Activity) context, ActivitySpecial.class);
+            }
+        });
         return convertView;
     }
 

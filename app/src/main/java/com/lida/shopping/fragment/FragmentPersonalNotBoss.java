@@ -12,7 +12,9 @@ import com.lida.shopping.activity.ActivityBooks;
 import com.lida.shopping.activity.ActivityCoupon;
 import com.lida.shopping.activity.ActivityProblem;
 import com.lida.shopping.activity.ActivityReceiveAddress;
+import com.lida.shopping.activity.ActivitySetting;
 import com.lida.shopping.activity.ActivitySuggest;
+import com.lida.shopping.login.ActivityInvitationCode;
 import com.midian.base.base.BaseFragment;
 import com.midian.base.util.UIHelper;
 
@@ -65,6 +67,8 @@ public class FragmentPersonalNotBoss extends BaseFragment {
                 UIHelper.jump(_activity, ActivityCoupon.class);
                 break;
             case R.id.tvWantShop:
+                bundle.putString("from","FragmentPersonalNotBoss");
+                UIHelper.jump(_activity, ActivityInvitationCode.class, bundle);
                 break;
             case R.id.tvLookHistory:
                 break;
@@ -72,6 +76,7 @@ public class FragmentPersonalNotBoss extends BaseFragment {
                 UIHelper.jump(_activity, ActivitySuggest.class);
                 break;
             case R.id.tvSetting:
+                UIHelper.jump(_activity, ActivitySetting.class);
                 break;
             case R.id.tvProblem:
                 UIHelper.jump(_activity, ActivityProblem.class);

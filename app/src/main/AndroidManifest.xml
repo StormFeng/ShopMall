@@ -113,6 +113,14 @@
         <activity android:name=".activity.ActivityNoticeList"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
+        <!--了解邀请码-->
+        <activity android:name=".activity.ActivityInvitationDetail"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!--全球站-->
+        <activity android:name=".activity.ActivityGlobal"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

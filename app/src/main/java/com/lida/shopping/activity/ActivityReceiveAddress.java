@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * 收货地址
+ * 地址管理
  * Created by WeiQingFeng on 2017/4/21.
  */
 
@@ -33,7 +33,7 @@ public class ActivityReceiveAddress extends BaseListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ButterKnife.bind(this);
-        topbar.setTitle("收货地址");
+        topbar.setTitle("地址管理");
         topbar.setLeftImageButton(R.drawable.icon_back, UIHelper.finish(_activity));
     }
 

@@ -1,5 +1,7 @@
 package com.lida.shopping;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -7,12 +9,16 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.apkfuns.logutils.LogUtils;
 import com.lida.shopping.fragment.FragmentClass;
 import com.lida.shopping.fragment.FragmentHome;
 import com.lida.shopping.fragment.FragmentPersonal;
 import com.lida.shopping.fragment.FragmentPersonalNotBoss;
 import com.lida.shopping.fragment.FragmentShopCar;
+import com.lida.shopping.login.ActivityLogin;
+import com.lida.shopping.util.SharedPreferencesUtils;
 import com.midian.base.base.BaseFragmentActivity;
+import com.midian.base.util.UIHelper;
 import com.midian.base.widget.BaseLibTopbarView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -78,11 +84,29 @@ public class MainActivity extends BaseFragmentActivity {
                 switchFragment(fragmentShopCar);
                 break;
             case R.id.tvPersonal:
-                setButton(R.id.tvPersonal);
-                switchFragment(fragmentPersonal);
+                boolean isFirst = (boolean) SharedPreferencesUtils.getParam(_activity,"isFirst",true);
+                LogUtils.e(isFirst);
+                if(isFirst){
+                    Bundle bundle = new Bundle();
+                    bundle.putString("from","MainActivity");
+                    UIHelper.jumpForResult(_activity,ActivityLogin.class,bundle,1001);
+                }else{
+                    switchFragment(fragmentPersonalNotBoss);
+                    setButton(R.id.tvPersonal);
+                }
                 break;
             case R.id.tvMain:
                 break;
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode==RESULT_OK){
+            switchFragment(fragmentPersonal);
+            setButton(R.id.tvPersonal);
+            SharedPreferencesUtils.setParam(_activity,"isFirst",false);
         }
     }
 

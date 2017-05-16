@@ -18,6 +18,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    signingConfigs {
+        debug {
+            keyAlias 'daxiaoka'
+            keyPassword 'daxiaoka'
+            storeFile file("$rootDir/daxiaoka.jks")
+            storePassword 'daxiaoka'
+        }
+        release {
+            keyAlias 'daxiaoka'
+            keyPassword 'daxiaoka'
+            storeFile file("$rootDir/daxiaoka.jks")
+            storePassword 'daxiaoka'
+        }
+    }
 }
 
 dependencies {

@@ -45,14 +45,15 @@
                         android:padding="8dp">
                         <ImageView
                             android:layout_width="27dp"
-                            android:layout_height="27dp"/>
+                            android:layout_height="27dp"
+                            android:src="@drawable/icon_phone"/>
                         <EditText
                             android:id="@+id/et_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:textSize="16sp"
-                            android:layout_marginLeft="24dp"
+                            android:layout_marginLeft="10dp"
                             android:hint="请输入手机号码"
                             android:singleLine="true" />
                     </LinearLayout>
@@ -80,12 +81,13 @@
                                 android:padding="8dp">
                                 <ImageView
                                     android:layout_width="27dp"
-                                    android:layout_height="27dp"/>
+                                    android:layout_height="27dp"
+                                    android:src="@drawable/icon_pass"/>
                                 <EditText
                                     android:id="@+id/et_pass"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="24dp"
+                                    android:layout_marginLeft="10dp"
                                     android:background="@null"
                                     android:textSize="16sp"
                                     android:hint="您收到的验证码"
@@ -99,12 +101,12 @@
                         </LinearLayout>
                         <Button
                             android:id="@+id/btnCode"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:text="获取验证码"
-                            android:textColor="#FF3356"
+                            android:textColor="@color/select_codebtn"
                             android:textSize="14sp"
-                            android:background="@drawable/shape_1pink5radius_stroke"
+                            android:background="@drawable/select_codebtn"
                             android:padding="10dp"
                             android:layout_marginLeft="5dp"/>
                     </LinearLayout>
@@ -119,17 +121,16 @@
                     android:textSize="18sp"
                     android:layout_marginTop="36dp"
                     android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/tvCantReceiveCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收不到验证码？"
+                    android:textSize="13sp"
+                    android:textColor="#737373"
+                    android:padding="10dp"
+                    android:layout_marginTop="100dp"/>
             </LinearLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="收不到验证码？"
-                android:textSize="13sp"
-                android:textColor="#737373"
-                android:padding="10dp"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="60dp"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

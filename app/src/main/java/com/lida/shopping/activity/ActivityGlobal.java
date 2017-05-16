@@ -11,21 +11,20 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * 关于我们
- * Created by WeiQingFeng on 2017/4/25.
+ * 全球站
+ * Created by WeiQingFeng on 2017/5/15.
  */
 
-public class ActivityAboutUs extends BaseActivity {
-
+public class ActivityGlobal extends BaseActivity {
     @BindView(R.id.topbar)
     BaseLibTopbarView topbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aboutus);
+        setContentView(R.layout.activity_global);
         ButterKnife.bind(this);
-        topbar.setTitle("关于我们");
+        topbar.setTitle("全球站");
         topbar.setLeftImageButton(R.drawable.icon_back, UIHelper.finish(_activity));
     }
 }

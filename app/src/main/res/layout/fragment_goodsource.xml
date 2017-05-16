@@ -21,14 +21,14 @@
                 android:verticalSpacing="10dp"
                 android:listSelector="#00FFFFFF">
             </com.lida.shopping.widget.inner.InnerGridView>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="【补水神器】leaders／丽得姿三代美蒂优补水面膜，具有深层补 水，调节皮肤及修复毛孔的效果，提升肌肤的保水性，补水更直 接，更有效！"
-                android:textColor="#6F6F6F"
-                android:textSize="12sp"
-                android:padding="10dp"
-                android:lineSpacingExtra="3dp"/>
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="【补水神器】leaders／丽得姿三代美蒂优补水面膜，具有深层补 水，调节皮肤及修复毛孔的效果，提升肌肤的保水性，补水更直 接，更有效！"-->
+                <!--android:textColor="#6F6F6F"-->
+                <!--android:textSize="12sp"-->
+                <!--android:padding="10dp"-->
+                <!--android:lineSpacingExtra="3dp"/>-->
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

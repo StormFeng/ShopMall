@@ -48,7 +48,7 @@ public class ActivityBooks extends BaseFragmentActivity {
     @BindView(R.id.topbar)
     BaseLibTopbarView topbar;
 
-    private static final String[] CHANNELS = new String[]{"全部", "待付款", "待发货"};
+    private static final String[] CHANNELS = new String[]{"全部", "待付款", "待发货","已发货"};
     private List<String> mDataList = Arrays.asList(CHANNELS);
     private List<Fragment> fragments = new ArrayList<>();
 
@@ -65,6 +65,7 @@ public class ActivityBooks extends BaseFragmentActivity {
     private void initView() {
         topbar.setTitle("全部订单");
         topbar.setLeftImageButton(R.drawable.icon_back, UIHelper.finish(_activity));
+        fragments.add(new FragmentAllBooks());
         fragments.add(new FragmentAllBooks());
         fragments.add(new FragmentAllBooks());
         fragments.add(new FragmentAllBooks());
