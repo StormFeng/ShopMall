@@ -32,7 +32,7 @@ public class AdapterHListView extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 4;
+        return 6;
     }
 
     @Override
@@ -55,7 +55,7 @@ public class AdapterHListView extends BaseAdapter {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        if(position==3){
+        if(position==5){
             viewHolder.llGoodInfo.setVisibility(View.GONE);
             viewHolder.btnLookMore.setVisibility(View.VISIBLE);
         }else{

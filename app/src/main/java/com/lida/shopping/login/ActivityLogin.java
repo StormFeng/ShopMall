@@ -48,7 +48,7 @@ public class ActivityLogin extends BaseActivity {
             setContentView(R.layout.activity_login);
             ButterKnife.bind(this);
             topbar.setTitle("手机登录");
-            topbar.setLeftImageButton(R.drawable.icon_back, UIHelper.finish(this));
+            topbar.setLeftImageButton(R.drawable.icon_back, UIHelper.finish(_activity));
         }
     }
 
