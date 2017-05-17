@@ -191,7 +191,7 @@ public class BaseLibTopbarView extends RelativeLayout {
 			left_tv.setTextColor(getResources().getColor(R.color.white));
 			right_tv.setTextColor(getResources().getColor(R.color.white));
 			setBackgroundResource(R.color.white);
-			line_iv.setVisibility(VISIBLE);
+			line_iv.setVisibility(GONE);
 			// setBackgroundColor(getResources().getColor(
 			// R.color.topbar_bg));
 			// setBackgroundResource(R.drawable.dp_topbar_bg);

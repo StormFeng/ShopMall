@@ -41,18 +41,22 @@ public class ActivityLogin extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (ac.isUserIdExsit()) {
-            onDestroy();
-            LogUtils.e(ac.isUserIdExsit());
-        } else {
-            setContentView(R.layout.activity_login);
-            ButterKnife.bind(this);
-            topbar.setTitle("手机登录");
-            topbar.setLeftImageButton(R.drawable.icon_back, UIHelper.finish(_activity));
-        }
+//        if (ac.isUserIdExsit()) {
+//            onDestroy();
+//            LogUtils.e(ac.isUserIdExsit());
+//        } else {
+//            setContentView(R.layout.activity_login);
+//            ButterKnife.bind(this);
+//            topbar.setTitle("手机登录");
+//            topbar.setLeftImageButton(R.drawable.icon_back, null);
+//        }
+        setContentView(R.layout.activity_login);
+        ButterKnife.bind(this);
+        topbar.setTitle("手机登录");
+        topbar.setLeftImageButton(R.drawable.icon_back, UIHelper.finish(_activity));
     }
 
-    @OnClick({R.id.btnCode, R.id.btn_login, R.id.tvCantReceiveCode})
+    @OnClick({R.id.btnCode, R.id.btn_login, R.id.tvCantReceiveCode, R.id.left_ll})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btnCode:

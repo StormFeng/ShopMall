@@ -36,10 +36,12 @@
                 android:gravity="center"
                 android:layout_marginTop="30dp">
                 <ImageView
+                    android:id="@+id/ivOuZhou"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/icon_oz"/>
                 <ImageView
+                    android:id="@+id/ivAoXin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/icon_ox"
@@ -52,14 +54,17 @@
                 android:gravity="center"
                 android:layout_marginTop="30dp">
                 <ImageView
+                    android:id="@+id/ivMeiZhou"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/icon_mz"/>
+
                 <ImageView
+                    android:id="@+id/ivXinMaTai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/icon_xmt"
-                    android:layout_marginLeft="55dp"/>
+                    android:layout_marginLeft="55dp"
+                    android:src="@drawable/icon_xmt" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -68,10 +73,12 @@
                 android:gravity="center"
                 android:layout_marginTop="30dp">
                 <ImageView
+                    android:id="@+id/ivGangTai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/icon_gt"/>
                 <ImageView
+                    android:id="@+id/ivRiHan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/icon_rh"
